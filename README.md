@@ -14,6 +14,6 @@ Python **Rotary Encoder Knob** class based on interrupts (to preserve processor'
 Local control is good, remote control via mobile, tablet or computer is even better. There are plenty of projects connecting processes on RPI with mobile apps. Here you will be given a plain piece of python code to create an interactive HTML5 page you can open in any modern browser and control your RPI remotely.
 
 ##Quick links:
-Go to local control via rotary and LCD
-Go to web based RPI app
-Screenshots :)
+- Go to local control via rotary and LCD
+- Go to web based RPI app
+- Screenshots :)
