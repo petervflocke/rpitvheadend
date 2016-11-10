@@ -25,16 +25,16 @@ Local control is good, remote control via mobile, tablet or computer is even bet
 
 ####Prepare rotary switch,
 for example Alps EC11 Encoder. Solder resistors and capacitors directly on the switch and protect them with heat shrink tubing. Use below wiring digram.
-![rotary switch](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/rotary-switch.png  "Rotary Switch")
+![rotary switch](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/rotary-switch.png  "Rotary Switch")
 
 ####Prepare display:
 I used cheap [SainSmart 1.8″ Color TFT LCD Display](http://www.sainsmart.com/sainsmart-1-8-spi-lcd-module-with-microsd-led-backlight-for-arduino-mega-atmel-atmega.html) . This 1.8″ display has 128 x 160 pixels resolution and is capable of displaying 18-bit colors. Measure: 5 cm x 3.5 cm x 0,6 cm thick.
-![SainSmart 1.8 ST7735R TFT LCD Module](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/display.jpg  "SainSmart 1.8 ST7735R TFT LCD Module")
+![SainSmart 1.8 ST7735R TFT LCD Module](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/display.jpg  "SainSmart 1.8 ST7735R TFT LCD Module")
 My display has fixed back-light (there are versions with PWN backlight).  The Micro-SD-Card reader is left unused.
 The display is driven by a ST7735R controller and is well supported by new linux kernel. Refer to the software installation part.
 For display wiring refer to the picture
 SainSmart 1.8″ Color TFT LCD Display wiring:
-![SainSmart 1.8″ Color TFT LCD Display.](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/SaintSmartDiagram.png  "SainSmart 1.8″ Color TFT LCD Display.")
+![SainSmart 1.8″ Color TFT LCD Display.](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/SaintSmartDiagram.png  "SainSmart 1.8″ Color TFT LCD Display.")
 Note: When the screen is not used I can switching the power line – it still displays (magic or powering via data lines) dark screen – still testing.
 
 ####Prepare the power supply:
@@ -45,7 +45,7 @@ Following the RPI forum: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t
 
 You can solder the +5V wire to the points marked PP1 or PP2 and ground wire to PP3, PP$, PP5 or PP6. That will be the same as if the power has been supplied through the micro USB.
 
-![RPI Power](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/rpi-power.jpg  "RPI Power")
+![RPI Power](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/rpi-power.jpg  "RPI Power")
 
 Easymouse 2 is powered via USB from RPI.
 
@@ -56,7 +56,7 @@ USB tuner requires external 12V, this will be switched on/off by a dedicated rel
 The USB Tuner shell be switched off in case of no use/no streaming to save energy.
 
 ####Hands-on high level wiring diagram of all elements
-![High Level Wiring](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/highlewelwiring.jpg  "High Level Wiring")
+![High Level Wiring](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/highlewelwiring.jpg  "High Level Wiring")
 
 **Used GPIO for rotary the switch and relay**
 
