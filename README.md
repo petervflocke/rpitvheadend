@@ -34,6 +34,9 @@ The display is driven by a ST7735R controller and is well supported by new linux
 For display wiring refer to the picture
 Note: When the screen is not used I can switching the power line – it still displays (magic or powering via data lines) dark screen – still testing.
 
+SainSmart 1.8″ Color TFT LCD Display wiring
+![SainSmart 1.8″ Color TFT LCD Display.](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/SaintSmartDiagram.png  "SainSmart 1.8″ Color TFT LCD Display.")
+
 Hands-on high level wiring diagram of all elements
 ![High Level Wiring](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/highlewelwiring.jpg  "High Level Wiring")
 
