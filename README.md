@@ -20,11 +20,10 @@ Local control is good, remote control via mobile, tablet or computer is even bet
 Continue reading hardware part:
 
 
-
 ##Steps to prepare the hardware platform
 ###1. Hardware:
 
-Prepare rotary switch, for example 
+Prepare rotary switch, for example Alps EC11 Encoder
 ![rotary switch](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/rotary-switch.png  "Rotary Switch")
 
 ###2. Software: Download and install on sd card raspbian (jessie)
