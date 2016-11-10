@@ -30,13 +30,14 @@ for example Alps EC11 Encoder. Solder resistors and capacitors directly on the s
 ####Prepare display:
 I used cheap [SainSmart 1.8″ Color TFT LCD Display](http://www.sainsmart.com/sainsmart-1-8-spi-lcd-module-with-microsd-led-backlight-for-arduino-mega-atmel-atmega.html) . This 1.8″ display has 128 x 160 pixels resolution and is capable of displaying 18-bit colors. Measure: 5 cm x 3.5 cm x 0,6 cm thick.
 ![SainSmart 1.8 ST7735R TFT LCD Module](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/display.jpg  "SainSmart 1.8 ST7735R TFT LCD Module")
-My display has fixed back-light (there are version with PWN backlight).  The Micro-SD-Card reader is left unused.
+My display has fixed back-light (there are versions with PWN backlight).  The Micro-SD-Card reader is left unused.
 The display is driven by a ST7735R controller and is well supported by new linux kernel. Refer to the software installation part.
 For display wiring refer to the picture
+SainSmart 1.8″ Color TFT LCD Display wiring:
+![SainSmart 1.8″ Color TFT LCD Display.](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/SaintSmartDiagram.png  "SainSmart 1.8″ Color TFT LCD Display.")
 Note: When the screen is not used I can switching the power line – it still displays (magic or powering via data lines) dark screen – still testing.
 
-SainSmart 1.8″ Color TFT LCD Display wiring
-![SainSmart 1.8″ Color TFT LCD Display.](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/SaintSmartDiagram.png  "SainSmart 1.8″ Color TFT LCD Display.")
+
 
 Hands-on high level wiring diagram of all elements
 ![High Level Wiring](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/highlewelwiring.jpg  "High Level Wiring")
