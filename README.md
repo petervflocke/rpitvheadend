@@ -58,9 +58,6 @@ The USB Tuner shell be switched off in case of no use/no streaming to save energ
 ####Hands-on high level wiring diagram of all elements
 ![High Level Wiring](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/highlewelwiring.jpg  "High Level Wiring")
 
-> **Note:**
->For your reference I used as a housing an old D-Link Di-624 Wlan Router. Power socket is cut out from DVD Player board to get a nice stable 4 pin molex / amp connector. Just cut out the size you need. De-solder unwanted elements (I left some capacitors) tracked down the paths from the molex socket and solder 12V and 5V power cables.
-
 **Used GPIO for rotary the switch and relay**
 
 GPIO | Header PIN | Switch
@@ -82,6 +79,10 @@ GPIO 12 | 19 | SDA
 GPIO 5 | 18 | RS/DC 
 GPIO 6 | 22 | RES 
 GPIO 10 | 24 | CS 
+
+> **Note:**
+>For your reference I used as a housing an old D-Link Di-624 Wlan Router. Power socket is cut out from DVD Player board to get a nice stable 4 pin molex / amp connector. Just cut out the size you need. De-solder unwanted elements (I left some capacitors) tracked down the paths from the molex socket and solder 12V and 5V power cables.
+
 
 
 
