@@ -58,7 +58,7 @@ The USB Tuner shell be switched off in case of no use/no streaming to save energ
 ####Hands-on high level wiring diagram of all elements
 ![High Level Wiring](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/highlewelwiring.jpg  "High Level Wiring")
 
-**Used GPIO for rotary the switch and relay**
+**Used GPIO for the rotary switch and the relay nodule**
 
 GPIO | Header PIN | Switch
 --- | :--: | ---
