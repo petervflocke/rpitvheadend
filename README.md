@@ -4,7 +4,7 @@
 
 ###Introduction:
 
-This RPI TVHeadEnd Server is a platform based on Raspberry PI hardware, which creates a headless DVB-S2 Tuner and streams the video to any network client. This platform supports conditional access via “oscam” server.
+This RPI TVHeadEnd Server is a platform based on Raspberry PI hardware, which creates a headless DVB-S2 Tuner (DVBSky S960 USB Box) and streams the video to any network client. This platform supports conditional access via “oscam” server.
 
 
 ###Hidden Agenda - local and remote control examples
