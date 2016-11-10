@@ -37,10 +37,51 @@ SainSmart 1.8″ Color TFT LCD Display wiring:
 ![SainSmart 1.8″ Color TFT LCD Display.](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/SaintSmartDiagram.png  "SainSmart 1.8″ Color TFT LCD Display.")
 Note: When the screen is not used I can switching the power line – it still displays (magic or powering via data lines) dark screen – still testing.
 
+####Prepare the power supply:
 
+Let's power the RPI using dedicated pads instead via micro USB. This let us avoid cables sticking out of the box and all issues with too thin USB power cables, etc.
 
-Hands-on high level wiring diagram of all elements
+Following the RPI forum: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=137305
+
+You can solder the +5V wire to the points marked PP1 or PP2 and ground wire to PP3, PP$, PP5 or PP6. That will be the same as if the power has been supplied through the micro USB.
+
+![RPI Power](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/rpi-power.jpg  "RPI Power")
+
+Easymouse 2 is powered via USB from RPI.
+
+Add a switch for 5V for RPI for your convenience.
+
+USB tuner requires external 12V, this will be switched on/off by a dedicated relay module, which I have laying around from “Arduino time”. The better way would be a switch based on mosfet transistor. 
+
+The USB Tuner shell be switched off in case of no use/no streaming to save energy.
+
+####Hands-on high level wiring diagram of all elements
 ![High Level Wiring](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/highlewelwiring.jpg  "High Level Wiring")
+
+> **Note:**
+>For your reference I used as a housing an old D-Link Di-624 Wlan Router. Power socket is cut out from DVD Player board to get a nice stable 4 pin molex / amp connector. Just cut out the size you need. De-solder unwanted elements (I left some capacitors) tracked down the paths from the molex socket and solder 12V and 5V power cables.
+
+**Used GPIO for rotary the switch and relay**
+
+GPIO | Header PIN | Switch
+- | - | -
+GPIO 0 | 11 | Rotary switch pin **A**
+GPIO 1 | 12  | Relay input
+GPIO 2 | 13  | Rotary switch pin **B**
+GPIO 3 | 15  | Rotary push button **P1**
+GND | 9 | Ground for rotary switch
+
+**Used GPIO for the display**
+
+GPIO | Header PIN | Display
+- | - | -
+3.3 VDC  | 1 | VCC
+GND | 6  | GND
+GPIO 14 | 23 | SCL
+GPIO 12 | 19 | SDA
+GPIO 5 | 18 | RS/DC
+GPIO 6 | 22 | RES
+GPIO 10 | 24 | CS
 
 
 
