@@ -23,8 +23,21 @@ Continue reading hardware part:
 ##Steps to prepare the hardware platform
 ###1. Hardware:
 
-Prepare rotary switch, for example Alps EC11 Encoder
+####Prepare rotary switch,
+for example Alps EC11 Encoder. Solder resistors and capacitors directly on the switch and protect them with heat shrink tubing. Use below wiring digram.
 ![rotary switch](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/rotary-switch.png  "Rotary Switch")
+
+####Prepare display:
+I used cheap SainSmart 1.8″ Color TFT LCD Display. This 1.8″ display has 128 x 160 pixels resolution and is capable of displaying 18-bit colors. Measure: 5 cm x 3.5 cm x 0,6 cm thick.
+My display has fixed back-light (there are version with PWN backlight).  The Micro-SD-Card reader is left unused.
+The display is driven by a ST7735R controller and is well supported by new linux kernel. Refer to the software installation part.
+For display wiring refer to the picture
+Note: When the screen is not used I can switching the power line – it still displays (magic or powering via data lines) dark screen – still testing.
+
+Hands-on high level wiring diagram of all elements
+![High Level Wiring](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/highlewelwiring.jpg  "High Level Wiring")
+
+
 
 ###2. Software: Download and install on sd card raspbian (jessie)
 Connect your RPI to your network, power-on  and scan for new ip on your network to find newly booted rpi. Assuming your network segemnt is `192.168.0.0/24` you can find all ips
@@ -60,5 +73,4 @@ static domain_name_servers=192.168.0.1
 Make the network settings corresponding to your home network!
 
 [Install](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md)  if desired a passwordless ssh (this accelerate the work)
-
 
