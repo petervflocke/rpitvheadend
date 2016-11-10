@@ -24,6 +24,9 @@ Continue reading hardware part:
 ##Steps to prepare the hardware platform
 ###1. Hardware:
 
+Prepare rotary switch, for example 
+![rotary switch](https://raw.githubusercontent.com/petervflocke/rpitvheadend/118a232fb0f0624ffe47aa060fa2011373216952/rotary-switch.png  "Rotary Switch")
+
 ###2. Software: Download and install on sd card raspbian (jessie)
 Connect your RPI to your network, power-on  and scan for new ip on your network to find newly booted rpi. Assuming your network segemnt is `192.168.0.0/24` you can find all ips
 
