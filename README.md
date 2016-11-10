@@ -64,24 +64,24 @@ The USB Tuner shell be switched off in case of no use/no streaming to save energ
 **Used GPIO for rotary the switch and relay**
 
 GPIO | Header PIN | Switch
-- | - | -
-GPIO 0 | 11 | Rotary switch pin **A**
-GPIO 1 | 12  | Relay input
-GPIO 2 | 13  | Rotary switch pin **B**
-GPIO 3 | 15  | Rotary push button **P1**
-GND | 9 | Ground for rotary switch
+--- | :--: | ---
+GPIO 0 | 11 | Rotary switch pin **A** 
+GPIO 1 | 12  | Relay input 
+GPIO 2 | 13  | Rotary switch pin **B** 
+GPIO 3 | 15  | Rotary push button **P1** 
+GND | 9 | Ground for rotary switch 
 
 **Used GPIO for the display**
 
-GPIO | Header PIN | Display
-- | - | -
-3.3 VDC  | 1 | VCC
-GND | 6  | GND
-GPIO 14 | 23 | SCL
-GPIO 12 | 19 | SDA
-GPIO 5 | 18 | RS/DC
-GPIO 6 | 22 | RES
-GPIO 10 | 24 | CS
+GPIO | Header PIN | Display 
+--- | :--: | ---
+3.3 VDC  | 1 | VCC 
+GND | 6  | GND 
+GPIO 14 | 23 | SCL 
+GPIO 12 | 19 | SDA 
+GPIO 5 | 18 | RS/DC 
+GPIO 6 | 22 | RES 
+GPIO 10 | 24 | CS 
 
 
 
