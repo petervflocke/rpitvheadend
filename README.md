@@ -298,7 +298,7 @@ as pi user run
 	cd ~
 	git clone https://github.com/petervflocke/flasksse_rpi web
 	
-Start both programs after the boot, by modifying your `/etc/rc.local` script
+Start both programs after the boot, by modifying your /etc/rc.local` script
 ```sh
 sleep 3 
 gpio mode 1 output 
@@ -306,10 +306,11 @@ gpio write 1 0
 python /home/pi/menu/main.py& 
 python /home/pi/web/sse.py& 
 ```
-Complete rc.local file available in this repo for download
+Complete rc.local[rc.local](https://github.com/petervflocke/rpitvheadend/blob/master/rc.local) file available in this repo for download
 
 **Note**
 >gpio action – the tuner starts always with power on – it secures loading respective modules etc. If it is not used (no dvb streaming) it satys plug in into usb but the 12V power supply can be switched off to decrease energy consumption. It works fine with  the DVB S960 USB Tuner
 Finaly starts two programs one for display and rotary knob and the other for web interface. I want to have both to be able quickly access system menu.
 
+Restart and enjoy
 
