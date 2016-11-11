@@ -285,14 +285,16 @@ In order to run the two programs from
 	sudo pip instal psutil
 	sudo pip instal gevent
 
-###10. Install python software to manage services on RPI including graphic interface, rotary knob and web
+###Install python software to manage services on RPI including graphic interface, rotary knob and web
 Create graphical menu with rotary knob:
 as pi user run
+
 	cd ~
 	git clone https://github.com/petervflocke/rotaryencoder_rpi menu
 
 Create web interface 
 as pi user run
+
 	cd ~
 	git clone https://github.com/petervflocke/flasksse_rpi web
 	
