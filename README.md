@@ -203,7 +203,7 @@ for the entry of `pin@p18 (GPIO 1) ` such as:
 	pin@p18 { function = "output";  termination = "pull_down"; drive_strength_mA = < 8 >; startup_state = "active"; }; // My relay active at start
 
 Make sure that the `startup_state = "active"`parameter is set up.
-I added this also for the definition of `pins_2b2 { // Pi 2 Model B rev 1.1` Eventually compile ZZ compile the new blob file:
+I added this also to the definition of `pins_2b2 { // Pi 2 Model B rev 1.1` Eventually compile ZZ compile the new blob file:
 
 	sudo dtc -I dtb -O dts -o dt-blob.dts /boot/dt-blob.bin	
 	
@@ -211,10 +211,60 @@ I added this also for the definition of `pins_2b2 { // Pi 2 Model B rev 1.1` Eve
 
 Check the link https://www.linuxtv.org/wiki/index.php/DVBSKY_S960 for details.
 S960 is supported out of te box by RPI on Jessie, we need only to download firmware file from http://www.dvbsky.net/Support_linux.html. The [file](http://www.dvbsky.net/download/linux/dvbsky-firmware.tar.gz) 
-Extract following files to local folder 
+Extract following files to a local folder 
 
 	dvb-fe-ds3103.fw
 	dvb-demod-m88ds3103.fw
 	dvb-demod-m88ds3103.fw
 
 and move all of them to  `/lib/firmware/ `
+
+###Install tvheadend
+Compile or instal from repo – here how to with repo: https://tvheadend.org/projects/tvheadend/wiki/AptRepository
+	
+	sudo apt-get install apt-transport-https
+
+First install bintray's GPG key:
+
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61 
+	echo "deb https://dl.bintray.com/tvheadend/deb jessie release" | sudo tee -a /etc/apt/sources.list
+
+>**Note**
+This is for “jessie” Raspian version. In the tvheadend official repo there is only a “release” version no unstable or stable options. 
+
+Install tvheadend
+
+	sudo apt-get install tvheadend
+
+Disable tvheadend service at the boot time – we start it only if necessary via local menu or via web in order to save energy when not used
+
+	sudo update-rc.d -f tvheadend remove
+
+Tvheadend configuration requires several steps – google for it. It aso takes time to scan all multiplexers – be patient.
+
+###Install oscam server
+
+Download the oscam binary file from http://download.oscam.cc/index.php?direction=1&order=mod&directory=1.20_TRUNK/Raspberry
+
+Extract oscam binary file and copy it to `/usr/local/bin` and Check the permision:
+
+	sudo chown root:root /usr/local/bin/oscam
+	sudo chmod 755 /usr/local/bin/oscam
+
+Modify all necessary files according to your pay-tv provider. I'm not providing any help on this and I'd like to remind that watching pay-tv without required contract is illegal (at least in most of the countries). Eventually copy the files to `/usr/local/etc`
+
+You have to configure the oscam server, which is independent from pay-tv. For the Easymouse 2 USB Smart Card reader, which I used in my project following settings are fine:
+
+	protocol                      = mouse 
+	device                        = /dev/ttyUSB0 
+	detect                        = dc 
+
+Jessie is ready to provide all USB libraries, just setup your Easymouse 2 USB Smart Card  according to your card requirements plug and check if it is visible via lsusb.
+
+	lsusb
+	Bus 001 Device 005: ID 0403:6001 Future Technology Devices International, Ltd FT232 USB-Serial (UART) IC
+
+It apears as FT232 USB-Serial device
+Create oscam startup script in `/etc/init.d`folder   use following file as an oscam startscript oscam.sh
+
+

@@ -1,0 +1,42 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          Oscam
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Oscam init script
+# Description:       Launch oscam at startup
+### END INIT INFO
+ 
+DAEMON=/usr/local/bin/oscam
+DEAMON_OPTS="-b -r 2 -c /usr/local/etc"
+PIDFILE=/var/run/oscam.pid
+ 
+test -x ${DAEMON} || exit 0
+ 
+. /lib/lsb/init-functions
+ 
+case "$1" in
+    start)
+	log_daemon_msg "Starting OScam"
+	start-stop-daemon --start --quiet --background --pidfile ${PIDFILE} --make-pidfile --exec ${DAEMON} -- ${DAEMON_OPTS}
+	log_end_msg $?
+    ;;
+    stop)
+	log_daemon_msg "Stopping OScam"
+	start-stop-daemon --stop --exec ${DAEMON}
+	log_end_msg $?
+        sleep 10
+    ;;
+    force-reload|restart)
+    $0 stop
+    $0 start
+    ;;
+  *)
+    echo "Usage: /etc/init.d/oscam {start|stop|restart|force-reload}"
+    exit 1
+    ;;
+esac
+ 
+exit 0
