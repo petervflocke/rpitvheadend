@@ -32,10 +32,11 @@ I used cheap [SainSmart 1.8″ Color TFT LCD Display](http://www.sainsmart.com/s
 ![SainSmart 1.8 ST7735R TFT LCD Module](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/display.jpg  "SainSmart 1.8 ST7735R TFT LCD Module")
 My display has fixed back-light (there are versions with PWN backlight).  The Micro-SD-Card reader is left unused.
 The display is driven by a ST7735R controller and is well supported by new linux kernel. Refer to the software installation part.
-For display wiring refer to the picture
-SainSmart 1.8″ Color TFT LCD Display wiring:
+For the SainSmart 1.8″ Color TFT LCD Display connection refer to the wiring diagram:
 ![SainSmart 1.8″ Color TFT LCD Display.](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/SaintSmartDiagram.png  "SainSmart 1.8″ Color TFT LCD Display.")
-Note: When the screen is not used I can switching the power line – it still displays (magic or powering via data lines) dark screen – still testing.
+
+> **Note:**
+>When the screen is not used you can switch the VCC line off.  The display will still work (powering via data lines?) with a dark screen – still testing.
 
 ####Prepare the power supply:
 
