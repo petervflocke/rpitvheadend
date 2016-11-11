@@ -265,6 +265,49 @@ Jessie is ready to provide all USB libraries, just setup your Easymouse 2 USB Sm
 	Bus 001 Device 005: ID 0403:6001 Future Technology Devices International, Ltd FT232 USB-Serial (UART) IC
 
 It apears as FT232 USB-Serial device
-Create oscam startup script in `/etc/init.d`folder   use following file as an oscam startscript oscam.sh
+Create oscam startup script in `/etc/init.d`folder use following file as an oscam startscript `oscam` available in this git repository
+
+Add this service to the default startup procedure (as this does not consume too much energy)
+	sudo update-rc.d oscam defaults
+
+###Install required python libraries
+In order to run the two programs from
+- https://github.com/petervflocke/rotaryencoder_rpi
+- https://github.com/petervflocke/flasksse_rpi
+ to manage the server platform install following libraries:
+
+- transitions, a lightweight, object-oriented finite state machine implementation in Python
+- psutil
+- gevent
+
+	sudo apt-get install build-essential python-dev python-pip
+	sudo pip install transitions
+	sudo pip instal psutil
+	sudo pip instal gevent
+
+###10. Install python software to manage services on RPI including graphic interface, rotary knob and web
+Create graphical menu with rotary knob:
+as pi user run
+	cd ~
+	git clone https://github.com/petervflocke/rotaryencoder_rpi menu
+
+Create web interface 
+as pi user run
+	cd ~
+	git clone https://github.com/petervflocke/flasksse_rpi web
+	
+Start both programs after the boot, by modifying your /etc/rc.local` script
+```sh
+sleep 3 
+gpio mode 1 output 
+gpio write 1 0 
+python /home/pi/menu/main.py& 
+python /home/pi/web/sse.py& 
+```
+Complete rc.local file available in this repo for download
+
+**Note**
+>gpio action – the tuner starts always with power on – it secures loading respective modules etc. If it is not used (no dvb streaming) it satys plug in into usb but the 12V power supply can be switched off to decrease energy consumption. It works fine with  the DVB S960 USB Tuner
+Finaly starts two programs one for display and rotary knob and the other for web interface. I want to have both to be able quickly access system menu.
 
 
