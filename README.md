@@ -16,7 +16,7 @@ Local control is good, remote control via mobile, tablet or computer is even bet
 ##Quick links:
 - [Go to local control via rotary and LCD](https://github.com/petervflocke/rotaryencoder_rpi) 
 - [Go to web based RPI Server App](https://github.com/petervflocke/flasksse_rpi) 
-- [Screenshots](https://github.com/petervflocke/rpitvheadend/tree/master/res) Screenshots
+- [Screenshots](https://github.com/petervflocke/rpitvheadend/tree/master/res) 
 - Continue reading hardware part:
 
 ##Steps to prepare the server platform
@@ -305,7 +305,7 @@ gpio write 1 0
 python /home/pi/menu/main.py& 
 python /home/pi/web/sse.py& 
 ```
-Complete rc.local[rc.local](https://github.com/petervflocke/rpitvheadend/blob/master/rc.local) file available in this repo for download
+Complete [rc.local](https://github.com/petervflocke/rpitvheadend/blob/master/rc.local) file available in this repo for download
 
 **Note**
 >gpio action – the tuner starts always with power on – it secures loading respective modules etc. If it is not used (no dvb streaming) it satys plug in into usb but the 12V power supply can be switched off to decrease energy consumption. It works fine with  the DVB S960 USB Tuner
