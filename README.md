@@ -16,9 +16,8 @@ Local control is good, remote control via mobile, tablet or computer is even bet
 ##Quick links:
 - [Go to local control via rotary and LCD](https://github.com/petervflocke/rotaryencoder_rpi) 
 - [Go to web based RPI Server App](https://github.com/petervflocke/flasksse_rpi) 
-- Screenshots
+- [Screenshots](https://github.com/petervflocke/rpitvheadend/tree/master/res) Screenshots
 - Continue reading hardware part:
-
 
 ##Steps to prepare the server platform
  
