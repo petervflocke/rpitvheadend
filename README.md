@@ -298,7 +298,7 @@ as pi user run
 	cd ~
 	git clone https://github.com/petervflocke/flasksse_rpi web
 	
-Start both programs after the boot, by modifying your /etc/rc.local` script
+Start both programs after the boot, by modifying your `/etc/rc.local` script
 ```sh
 sleep 3 
 gpio mode 1 output 
