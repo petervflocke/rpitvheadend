@@ -35,7 +35,7 @@ The display is driven by a ST7735R controller and is well supported by new linux
 For the SainSmart 1.8″ Color TFT LCD Display connection refer to the wiring diagram:
 ![SainSmart 1.8″ Color TFT LCD Display.](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/SaintSmartDiagram.png  "SainSmart 1.8″ Color TFT LCD Display.")
 
-> **Note:**
+**Note:**
 >When the screen is not used you can switch the VCC line off.  The display will still work (powering via data lines?) with a dark screen – still testing.
 
 ####Prepare the power supply:
@@ -81,7 +81,7 @@ GPIO 5 | 18 | RS/DC
 GPIO 6 | 22 | RES 
 GPIO 10 | 24 | CS 
 
-> **Note:**
+**Note:**
 >For your reference I used as a housing an old D-Link Di-624 Wlan Router. Power socket is cut out from DVD Player board to get a nice stable 4 pin molex / amp connector. Just cut out the size you need. De-solder unwanted elements (I left some capacitors) tracked down the paths from the molex socket and solder 12V and 5V power cables.
 
 
