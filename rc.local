@@ -1,43 +1,27 @@
-#! /bin/sh
-### BEGIN INIT INFO
-# Provides:          rc.local
-# Required-Start:    $all
-# Required-Stop:
-# Default-Start:     2 3 4 5
-# Default-Stop:
-# Short-Description: Run /etc/rc.local if it exist
-### END INIT INFO
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
 
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+setterm --blank 0
+/home/pi/menu/clearlogs.sh
+sleep 3
+gpio mode 1 output
+gpio write 1 0
+python /home/pi/menu/main.py&
+python /home/pi/web/sse.py&
 
-PATH=/sbin:/usr/sbin:/bin:/usr/bin
-
-. /lib/init/vars.sh
-. /lib/lsb/init-functions
-
-do_start() {
-	if [ -x /etc/rc.local ]; then
-	        [ "$VERBOSE" != no ] && log_begin_msg "Running local boot scripts (/etc/rc.local)"
-		/etc/rc.local
-		ES=$?
-		[ "$VERBOSE" != no ] && log_end_msg $ES
-		return $ES
-	fi
-}
-
-case "$1" in
-    start)
-	do_start
-        ;;
-    restart|reload|force-reload)
-        echo "Error: argument '$1' not supported" >&2
-        exit 3
-        ;;
-    stop|status)
-        # No-op
-        exit 0
-        ;;
-    *)
-        echo "Usage: $0 start|stop" >&2
-        exit 3
-        ;;
-esac
+exit 0
