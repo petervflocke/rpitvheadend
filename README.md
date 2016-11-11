@@ -192,3 +192,29 @@ Get the compiler:
 Download the file `dt-blob.dts` for example from the above link, look at the bottom of the article or the better way is to create your own *.dts file out of your current hardware installation by calling on RPI in the local directory `~/dts`call:
 	
 	dtc -I dtb -O dts -o dt-blob.dts /boot/dt-blob.bin
+
+
+![dts](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/dt-blob.dts.png  "dts")
+
+
+In the file `dt-blob.dts`depending on your hardware revision modify section of `pins_2b1 { // Pi 2 Model B rev 1.0`
+for the entry of `pin@p18 (GPIO 1) ` such as:
+
+	pin@p18 { function = "output";  termination = "pull_down"; drive_strength_mA = < 8 >; startup_state = "active"; }; // My relay active at start
+
+Make sure that the `startup_state = "active"`parameter is set up.
+I added this also for the definition of `pins_2b2 { // Pi 2 Model B rev 1.1` Eventually compile ZZ compile the new blob file:
+
+	sudo dtc -I dtb -O dts -o dt-blob.dts /boot/dt-blob.bin	
+	
+###Install DVBSky S960 USB tuner
+
+Check the link https://www.linuxtv.org/wiki/index.php/DVBSKY_S960 for details.
+S960 is supported out of te box by RPI on Jessie, we need only to download firmware file from http://www.dvbsky.net/Support_linux.html. The [file](http://www.dvbsky.net/download/linux/dvbsky-firmware.tar.gz) 
+Extract following files to local folder 
+
+	dvb-fe-ds3103.fw
+	dvb-demod-m88ds3103.fw
+	dvb-demod-m88ds3103.fw
+
+and move all of them to  `/lib/firmware/ `
