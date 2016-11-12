@@ -1,14 +1,13 @@
 ## Raspberry PI TVHeadend Server
 \#raspberrypi #rotary #lcd #flask #sse #tvheadend #oscam
 
-Click on below image for Youtube video:
-[![Youtube: RPI tvheadend Server](http://img.youtube.com/vi/uBy8dHAQwYI/0.jpg  "Youtube: RPI tvheadend Server")](https://youtu.be/uBy8dHAQwYI)
-
-
 ###Introduction:
 
 This RPI TVHeadEnd Server is a platform based on Raspberry PI hardware, which creates a headless DVB-S2 Tuner (DVBSky S960 USB Box) and streams the video to any network client. This platform supports conditional access via “oscam” server.
 
+ Youtube video link:
+ 
+[![Youtube: RPI tvheadend Server](http://img.youtube.com/vi/uBy8dHAQwYI/0.jpg  "Youtube: RPI tvheadend Server")](https://youtu.be/uBy8dHAQwYI)
 
 ###Hidden Agenda - local and remote control examples
 You can either recreate this to have similar platform or rip out three  “goodies” for your own Raspberry Pi projects. Respective two github repositories provide you:
@@ -19,8 +18,9 @@ Local control is good, remote control via mobile, tablet or computer is even bet
 ##Quick links:
 - [Go to local control via rotary and LCD](https://github.com/petervflocke/rotaryencoder_rpi) 
 - [Go to web based RPI Server App](https://github.com/petervflocke/flasksse_rpi) 
-- [Screenshots](https://github.com/petervflocke/rpitvheadend/tree/master/res#raspberry-pi-tvheadend-server-screenshots) 
-- Continue reading hardware part:
+- [Screenshots](https://github.com/petervflocke/rpitvheadend/blob/master/res/README.md#raspberry-pi-tvheadend-server-screenshots) 
+
+... or continue reading hardware and software parts:
 
 ##Steps to prepare the server platform
  

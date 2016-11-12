@@ -36,3 +36,6 @@ at bottom, from left display power switch for backlight, main rpi power switch
 ##Power board
 ![power board](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/9.jpg  "power board")
 cut out from dvd circuit board
+
+Youtube video:
+[![Youtube: RPI tvheadend Server](http://img.youtube.com/vi/uBy8dHAQwYI/0.jpg  "Youtube: RPI tvheadend Server")](https://youtu.be/uBy8dHAQwYI)
