@@ -21,7 +21,7 @@ setterm --blank 0
 sleep 3
 gpio mode 1 output
 gpio write 1 0
-python /home/pi/menu/main.py&
-python /home/pi/web/sse.py&
+python /home/pi/menu/main.py > /dev/null 2>&1&
+python /home/pi/web/sse.py > /dev/null 2>&1&
 
 exit 0
