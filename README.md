@@ -100,7 +100,9 @@ Connect your RPI to your network, power-on  and scan for new ip on your network 
 nmap -sn 192.168.0.0/24
 ssh to pi@detdected.ip
 ```
-finish instaltion running `raspi-config`enable SPI – will be needed by the display. After the first instllation always run 
+... finish instaltion running `raspi-config`
+Enable SPI – will be needed by the display.
+After the first instllation always run 
 ```sh
 sudo apt-get update
 sudo apt-get upgrade
@@ -131,6 +133,10 @@ Make the network settings corresponding to your home network!
 ###Customize your RPI software to use SainSmart 1.8" TFT  LCD  display
 
 Refer to the https://github.com/notro/fbtft/wiki#install for more details.
+
+Check the file `/boot/config.txt`if this entry is enabled (end add if neccessary)
+
+	dtparam=spi=on
 
 Add to file `/etc/modules-load.d/fbtft.conf`two new lines:
 	
