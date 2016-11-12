@@ -3,9 +3,15 @@
 
 ##Local user interface (LCD + Rotary Switch)
 ![local interface](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/localinterface.jpg  "local interface")
+From left upper corner: 
+- Main Screen with system information
+- tvhead service status switch
+- tvhead service log view
+- oscam service status switch
+- RPI shutdown menu
 
 ##Web interface
-![web interface](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/12.png  "web interface ")
+![web interface](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/webinterface.png  "web interface ")
 
 ##Housing
 ![housing](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/0.jpg  "housing")
