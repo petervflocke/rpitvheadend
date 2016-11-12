@@ -2,7 +2,7 @@
 \#raspberrypi #rotary #lcd #flask #sse #tvheadend #oscam
 
 Click on below image for Youtube video:
-![Youtube: RPI tvheadend Server](http://img.youtube.com/vi/uBy8dHAQwYI/0.jpg  "Youtube: RPI tvheadend Server")
+[![Youtube: RPI tvheadend Server](http://img.youtube.com/vi/uBy8dHAQwYI/0.jpg  "Youtube: RPI tvheadend Server")](https://youtu.be/uBy8dHAQwYI)
 
 
 ###Introduction:
