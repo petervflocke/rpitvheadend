@@ -14,8 +14,8 @@ Python **Rotary Encoder Knob** class based on interrupts (to preserve processor'
 Local control is good, remote control via mobile, tablet or computer is even better. There are plenty of projects connecting processes on RPI with mobile apps. Here you will be given a plain piece of python code to create an interactive HTML5 page you can open in any modern browser and control your RPI remotely.
 
 ##Quick links:
-- [Go to local control via rotary and LCD](https://github.com/petervflocke/rotaryencoder_rpi) 
-- [Go to web based RPI Server App](https://github.com/petervflocke/flasksse_rpi) 
+- [Go to local user interface via rotary and LCD](https://github.com/petervflocke/rotaryencoder_rpi) 
+- [Go to web user interface based RPI/flask Server App](https://github.com/petervflocke/flasksse_rpi) 
 - [Screenshots](https://github.com/petervflocke/rpitvheadend/blob/master/res/README.md#raspberry-pi-tvheadend-server-screenshots) 
 
 ... or continue reading hardware and software parts:
