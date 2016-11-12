@@ -1,12 +1,11 @@
 ## Raspberry PI TVHeadend Server Screenshots
 \#raspberrypi #rotary #lcd #flask #sse #tvheadend #oscam
 
+##Local user interface (LCD + Rotary Switch)
+![local interface](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/localinterface.jpg  "local interface")
+
 ##Web interface
 ![web interface](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/12.png  "web interface ")
-![web interface](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/13.png  "web interface")
-
-##Local Interface
-
 
 ##Housing
 ![housing](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/0.jpg  "housing")
