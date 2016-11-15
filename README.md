@@ -315,7 +315,8 @@ python /home/pi/web/sse.py > /dev/null 2>&1&
 Complete [rc.local](https://github.com/petervflocke/rpitvheadend/blob/master/rc.local) file available in this repo for download
 
 >**Note**
->gpio action – the tuner starts always with power on – it secures loading respective modules etc. If it is not used (no dvb streaming) it satys plug in into usb but the 12V power supply can be switched off to decrease energy consumption. It works fine with  the DVB S960 USB Tuner
+> 
+> gpio action – the tuner starts always with power on – it secures loading respective modules etc. If it is not used (no dvb streaming) it satys plug in into usb but the 12V power supply can be switched off to decrease energy consumption. It works fine with  the DVB S960 USB Tuner
 Finaly starts two programs one for display and rotary knob and the other for web interface. I want to have both to be able quickly access system menu.
 
 Test the application by running:
