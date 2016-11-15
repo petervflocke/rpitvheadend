@@ -25,7 +25,7 @@ Local control is good, remote control via mobile, tablet or computer is even bet
 ##1. Hardware:
 
 ####Prepare rotary switch,
-for example Alps EC11 Encoder. Solder resistors and capacitors directly on the switch and protect them with heat shrink tubing. Use below wiring digram.
+Use any a 2-bit quadrature-encoded rotary encoder for example Alps EC11 Encoder. Solder resistors and capacitors directly on the switch and protect them with heat shrink tubing. Use below wiring digram.
 ![rotary switch](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/rotary-switch.png  "Rotary Switch")
 
 ####Prepare display:
@@ -293,13 +293,13 @@ In order to run the two programs from
 
 ###Install python software to manage services on RPI including graphic interface, rotary knob and web
 Create graphical menu with rotary knob:
-as pi user run
+as the pi user run
 
 	cd ~
 	git clone https://github.com/petervflocke/rotaryencoder_rpi menu
 
 Create web interface 
-as pi user run
+as the pi user run
 
 	cd ~
 	git clone https://github.com/petervflocke/flasksse_rpi web
