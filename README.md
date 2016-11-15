@@ -277,10 +277,13 @@ Add this service to the default startup procedure (as this does not consume too 
 	sudo update-rc.d oscam defaults
 
 ###Install required python libraries
+**Note**
+> Assumption you use the newest jessie raspian version.
+
 In order to run the two programs from
 - https://github.com/petervflocke/rotaryencoder_rpi
 - https://github.com/petervflocke/flasksse_rpi
- to manage the server platform install following libraries:
+ to controll the server platform install following libraries:
 
 - transitions, a lightweight, object-oriented finite state machine implementation in Python
 - psutil
@@ -290,6 +293,7 @@ In order to run the two programs from
 	sudo pip install transitions
 	sudo pip instal psutil
 	sudo pip instal gevent
+
 
 ###Install python software to manage services on RPI including graphic interface, rotary knob and web
 Create graphical menu with rotary knob:
