@@ -36,7 +36,8 @@ The display is driven by a ST7735R controller and is well supported by new linux
 For the SainSmart 1.8″ Color TFT LCD Display connection refer to the wiring diagram:
 ![SainSmart 1.8″ Color TFT LCD Display.](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/SaintSmartDiagram.png  "SainSmart 1.8″ Color TFT LCD Display.")
 
-**Note:**
+>**Note:**
+
 >When the screen is not used you can switch the VCC line off.  The display will still work (powering via data lines?) with a dark screen – still testing.
 
 ####Prepare the power supply:
@@ -82,7 +83,8 @@ GPIO 5 | 18 | RS/DC
 GPIO 6 | 22 | RES 
 GPIO 10 | 24 | CS 
 
-**Note:**
+>**Note:**
+
 >For your reference I used as a housing an old D-Link Di-624 Wlan Router. Power socket is cut out from DVD Player board to get a nice stable 4 pin molex / amp connector. Just cut out the size you need. De-solder unwanted elements (I left some capacitors) tracked down the paths from the molex socket and solder 12V and 5V power cables.
 
 
@@ -235,7 +237,8 @@ First install bintray's GPG key:
 	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61 
 	echo "deb https://dl.bintray.com/tvheadend/deb jessie release" | sudo tee -a /etc/apt/sources.list
 
-**Note**
+>**Note**
+
 >This is for “jessie” Raspian version. In the tvheadend official repo there is only a “release” version no unstable or stable options. 
 
 Install tvheadend
@@ -277,7 +280,8 @@ Add this service to the default startup procedure (as this does not consume too 
 	sudo update-rc.d oscam defaults
 
 ###Install required python libraries
-**Note**
+>**Note**
+
 > Assumption you use the newest jessie raspian version.
 
 In order to run the two programs from
@@ -318,7 +322,8 @@ python /home/pi/web/sse.py > /dev/null 2>&1&
 ```
 Complete [rc.local](https://github.com/petervflocke/rpitvheadend/blob/master/rc.local) file available in this repo for download
 
-**Note**
+>**Note**
+
 > gpio action – the tuner starts always with power on – it secures loading respective modules etc. If it is not used (no dvb streaming) it satys plug in into usb but the 12V power supply can be switched off to decrease energy consumption. It works fine with  the DVB S960 USB Tuner
 Finaly starts two programs one for display and rotary knob and the other for web interface. I want to have both to be able quickly access system menu.
 
