@@ -275,7 +275,7 @@ Jessie is ready to provide all USB libraries, just setup your Easymouse 2 USB Sm
 
 It apears as FT232 USB-Serial device.
 
-Next create oscam startup script in `/etc/init.d`folder use following file as an oscam startscript `oscam` available in this git repository
+Next create oscam startup script in `/etc/init.d` folder using following file as an oscam startscript `oscam` available in this git repository
 
 Add this service to the default startup procedure (as this does not consume too much energy)
 	sudo update-rc.d oscam defaults
