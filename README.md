@@ -288,6 +288,7 @@ Add this service to the default startup procedure (as this does not consume too 
 In order to run the two programs from
 - https://github.com/petervflocke/rotaryencoder_rpi
 - https://github.com/petervflocke/flasksse_rpi
+
  to controll the server platform install following libraries:
 
 - transitions, a lightweight, object-oriented finite state machine implementation in Python
