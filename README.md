@@ -15,7 +15,7 @@ Local control is good, remote control via mobile, tablet or computer is even bet
 
 ##Quick links:
 - [Go to local user interface via LCD and rotary switch](https://github.com/petervflocke/rotaryencoder_rpi#local-user-interface-via-lcd-and-rotary-knob) 
-- [Go to web user interface based RPI/flask Server App](https://github.com/petervflocke/flasksse_rpi) 
+- [Go to web user interface based RPI/flask Server App](https://github.com/petervflocke/flasksse_rpi#web-user-interface-for-rpi) 
 - [Screenshots](https://github.com/petervflocke/rpitvheadend/blob/master/res/README.md#raspberry-pi-tvheadend-server-screenshots) 
 
 ... or continue reading hardware and software parts:
