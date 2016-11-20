@@ -308,15 +308,19 @@ sudo pip install flask
 Create graphical menu with rotary knob:
 as the pi user run
 
-	cd ~
-	git clone https://github.com/petervflocke/rotaryencoder_rpi menu
+```sh
+cd ~
+git clone https://github.com/petervflocke/rotaryencoder_rpi menu
+chmod 755 menu/myshutdown.sh
+```
 
 Create web interface 
 as the pi user run
-
-	cd ~
-	git clone https://github.com/petervflocke/flasksse_rpi web
-	
+```sh
+cd ~
+git clone https://github.com/petervflocke/flasksse_rpi web
+chmod 755 web/myreboot.sh web/testdaemon.py
+```	
 Start both programs after the boot, by modifying your /etc/rc.local` script
 ```sh
 sleep 3 
