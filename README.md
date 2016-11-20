@@ -292,14 +292,17 @@ In order to run the two programs from
  to controll the server platform install following libraries:
 
 - transitions, a lightweight, object-oriented finite state machine implementation in Python
-- psutil
-- gevent
+- psutil, library for retrieving information onrunning processes and system utilization 
+- gevent, a coroutine -based networking library providing a high-level synchronous API on top of the libev event loop
+- flask, a micro web framework
 
-	sudo apt-get install build-essential python-dev python-pip
-	sudo pip install transitions
-	sudo pip instal psutil
-	sudo pip instal gevent
-
+```sh
+sudo apt-get install build-essential python-dev python-pip
+sudo pip install transitions
+sudo pip instal psutil
+sudo pip instal gevent
+sudo pip install flask
+```
 
 ###Install python software to manage services on RPI including graphic interface, rotary knob and web
 Create graphical menu with rotary knob:
