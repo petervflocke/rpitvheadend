@@ -1,7 +1,7 @@
 ## Raspberry PI TVHeadend Server
 \#raspberrypi #rotary #lcd #flask #sse #tvheadend #oscam
 
-###Introduction:
+### Introduction:
 
 This RPI TVHeadEnd Server is a platform based on Raspberry PI hardware, which creates a headless DVB-S2 Tuner (DVBSky S960 USB Box) and streams the video to any network client. This platform supports conditional access via “oscam” server.
 
@@ -13,22 +13,22 @@ Python **Rotary Encoder Knob** class based on interrupts (to preserve processor'
 
 Local control is good, remote control via mobile, tablet or computer is even better. There are plenty of projects connecting processes on RPI with mobile apps. Here you will be given a plain piece of python code to create an interactive HTML5 page you can open in any modern browser and control your RPI remotely.
 
-##Quick links:
+## Quick links:
 - [Go to local user interface via LCD and rotary switch](https://github.com/petervflocke/rotaryencoder_rpi#local-user-interface-via-lcd-and-rotary-knob) 
 - [Go to web user interface based RPI/flask Server App](https://github.com/petervflocke/flasksse_rpi#web-user-interface-for-rpi) 
 - [Screenshots](https://github.com/petervflocke/rpitvheadend/blob/master/res/README.md#raspberry-pi-tvheadend-server-screenshots) 
 
 ... or continue reading hardware and software parts:
 
-##Steps to prepare the server platform
+## Steps to prepare the server platform
  
-##1. Hardware:
+## 1. Hardware:
 
-####Prepare rotary switch,
+#### Prepare rotary switch,
 Use any a 2-bit quadrature-encoded rotary encoder for example Alps EC11 Encoder. Solder resistors and capacitors directly on the switch and protect them with heat shrink tubing. Use below wiring digram.
 ![rotary switch](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/rotary-switch.png  "Rotary Switch")
 
-####Prepare display:
+#### Prepare display:
 I used cheap [SainSmart 1.8″ Color TFT LCD Display](http://www.sainsmart.com/sainsmart-1-8-spi-lcd-module-with-microsd-led-backlight-for-arduino-mega-atmel-atmega.html) . This 1.8″ display has 128 x 160 pixels resolution and is capable of displaying 18-bit colors. Measure: 5 cm x 3.5 cm x 0,6 cm thick.
 ![SainSmart 1.8 ST7735R TFT LCD Module](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/display.jpg  "SainSmart 1.8 ST7735R TFT LCD Module")
 My display has fixed back-light (there are versions with PWN backlight).  The Micro-SD-Card reader is left unused.
@@ -40,7 +40,7 @@ For the SainSmart 1.8″ Color TFT LCD Display connection refer to the wiring di
 
 >When the screen is not used you can switch the VCC line off.  The display will still work (powering via data lines?) with a dark screen – still testing.
 
-####Prepare the power supply:
+#### Prepare the power supply:
 
 Let's power the RPI using dedicated pads instead via micro USB. This let us avoid cables sticking out of the box and all issues with too thin USB power cables, etc.
 
@@ -58,7 +58,7 @@ USB tuner requires external 12V, this will be switched on/off by a dedicated rel
 
 The USB Tuner shell be switched off in case of no use/no streaming to save energy.
 
-####Hands-on high level wiring diagram of all elements
+#### Hands-on high level wiring diagram of all elements
 ![High Level Wiring](https://raw.githubusercontent.com/petervflocke/rpitvheadend/master/res/highlewelwiring.jpg  "High Level Wiring")
 
 **Used GPIO for the rotary switch and the relay nodule**
@@ -91,9 +91,9 @@ GPIO 10 | 24 | CS
 ***
 
 
-##2. Software: 
+## 2. Software: 
 
-###Do the standard raspian isntalation on a SD-Card
+### Do the standard raspian isntalation on a SD-Card
 
 Download and install on sd card raspbian (jessie), use one of the available [guides](https://www.raspberrypi.org/documentation/installation/installing-images/) 
 
@@ -133,7 +133,7 @@ Make the network settings corresponding to your home network!
 
 [Install](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md)  if desired a passwordless ssh (this accelerate the work)
 
-###Customize your RPI software to use SainSmart 1.8" TFT  LCD  display
+### Customize your RPI software to use SainSmart 1.8" TFT  LCD  display
 
 Refer to the https://github.com/notro/fbtft/wiki#install for more details.
 
@@ -187,7 +187,7 @@ and finally add to the file `/etc/modules`
 	fbtft 
 	fbtft_device name=sainsmart18 rotate=270 verbose=0
 
-###Prepare power pin for usb dvb tuner – at boot time we need “1” to enable modules loading
+### Prepare power pin for usb dvb tuner – at boot time we need “1” to enable modules loading
 
 More details here: https://www.raspberrypi.org/documentation/configuration/pin-configuration.md
 	
@@ -215,7 +215,7 @@ I added this also to the definition of `pins_2b2 { // Pi 2 Model B rev 1.1` Even
 
 	sudo dtc -I dtb -O dts -o dt-blob.dts /boot/dt-blob.bin	
 	
-###Install DVBSky S960 USB tuner
+### Install DVBSky S960 USB tuner
 
 Check the link https://www.linuxtv.org/wiki/index.php/DVBSKY_S960 for details.
 S960 is supported out of te box by RPI on Jessie, we need only to download firmware file from http://www.dvbsky.net/Support_linux.html. The [file](http://www.dvbsky.net/download/linux/dvbsky-firmware.tar.gz) 
@@ -227,7 +227,7 @@ Extract following files to a local folder
 
 and move all of them to  `/lib/firmware/ `
 
-###Install tvheadend
+### Install tvheadend
 Compile or instal from repo – here how to with repo: https://tvheadend.org/projects/tvheadend/wiki/AptRepository
 	
 	sudo apt-get install apt-transport-https
@@ -251,7 +251,7 @@ Disable tvheadend service at the boot time – we start it only if necessary via
 
 Tvheadend configuration requires several steps – google for it. It aso takes time to scan all multiplexers – be patient.
 
-###Install oscam server
+### Install oscam server
 
 Download the oscam binary file from http://download.oscam.cc/index.php?direction=1&order=mod&directory=1.20_TRUNK/Raspberry
 
@@ -280,7 +280,7 @@ Next create oscam startup script in `/etc/init.d` folder using following file as
 Add this service to the default startup procedure (as this does not consume too much energy)
 	sudo update-rc.d oscam defaults
 
-###Install required python libraries
+### Install required python libraries
 >**Note**
 
 > Assumption you use the newest jessie raspian version.
@@ -304,7 +304,7 @@ sudo pip instal gevent
 sudo pip install flask
 ```
 
-###Install python software to manage services on RPI including graphic interface, rotary knob and web
+### Install python software to manage services on RPI including graphic interface, rotary knob and web
 Create graphical menu with rotary knob:
 as the pi user run
 
